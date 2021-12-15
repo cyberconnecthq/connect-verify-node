@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const API_URL = {
   ceramic:
-    process.env.NODE_ENV === "dev"
-      ? "https://ceramic.stg.cybertino.io"
-      : "https://ceramic.cybertino.io",
+    process.env.NODE_ENV === "prod"
+      ? "https://ceramic.cybertino.io"
+      : "https://ceramic.stg.cybertino.io",
 };
 
 app.post("/verify", async (req, res) => {
