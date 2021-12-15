@@ -52,9 +52,6 @@ app.post("/verify", async (req, res) => {
   }
 });
 
-app.listen("443", () => {
-  // console.log("port 8000");
-});
 app.listen("80", () => {
   // console.log("port 8000");
 });
