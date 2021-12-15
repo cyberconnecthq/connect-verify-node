@@ -1,0 +1,41 @@
+{
+  "name": "connect-verify-node",
+  "version": "1.0.0",
+  "description": "verify connect from did",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=prod&& node ./index.js",
+    "dev": "set NODE_ENV=dev&& nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberconnecthq/connect-verify-node.git"
+  },
+  "author": "sean.zhao@cybertinolab.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cyberconnecthq/connect-verify-node/issues"
+  },
+  "homepage": "https://github.com/cyberconnecthq/connect-verify-node#readme",
+  "dependencies": {
+    "@3id/connect": "^0.2.5",
+    "@ceramicnetwork/blockchain-utils-linking": "^1.5.1-rc.1",
+    "@ceramicnetwork/stream-caip10-link": "^1.2.4",
+    "@ceramicstudio/idx": "^0.12.2",
+    "@ethersproject/address": "^5.4.0",
+    "@ethersproject/providers": "^5.4.5",
+    "@stablelib/sha256": "^1.0.1",
+    "3id-did-provider": "^1.1.0",
+    "body-parser": "^1.19.1",
+    "did-jwt": "^5.2.0",
+    "eslint": "^8.4.1",
+    "express": "^4.17.1",
+    "framer-motion": "^4",
+    "git": "^0.1.5",
+    "uint8arrays": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
