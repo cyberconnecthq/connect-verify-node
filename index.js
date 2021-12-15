@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const API_URL = {
   ceramic:
-    process.env.NODE_ENV === "prod"
+    process.env.HEROKU_ENV === "prod"
       ? "https://ceramic.cybertino.io"
       : "https://ceramic.stg.cybertino.io",
 };
