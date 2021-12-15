@@ -19,7 +19,6 @@ const API_URL = {
 app.post("/verify", async (req, res) => {
   try {
     const { address, jws } = req.body;
-    console.log(API_URL.ceramic);
     const ceramic = new CeramicClient(API_URL.ceramic);
     const accountLink = await Caip10Link.fromAccount(
       ceramic,
@@ -30,18 +29,20 @@ app.post("/verify", async (req, res) => {
       ...threeIdResolver,
     };
     const did = new DID({ resolver });
+    console.log("did:", did);
     const resolvedDoc = await did.resolve(accountLink.did);
+    console.log(resolvedDoc);
     if (
       !resolvedDoc.didDocument ||
       !resolvedDoc.didDocument.verificationMethod
     ) {
-      res.send(false);
+      res.send({ verified: false, resolvedDoc: resolvedDoc });
     }
     const matchedPub = did_jwt_1.verifyJWS(
       jws,
       resolvedDoc.didDocument.verificationMethod
     );
-
+    console.log(matchedPub);
     res.send({
       verified: true,
       pubkey: matchedPub.publicKeyBase58,
