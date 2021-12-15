@@ -51,7 +51,7 @@ app.post("/verify", async (req, res) => {
     res.send({ verified: false });
   }
 });
-
-app.listen("80", () => {
-  // console.log("port 8000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, (err) => {
+  if (err) throw err;
 });
