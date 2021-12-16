@@ -20,6 +20,7 @@ app.post("/verify", async (req, res) => {
   console.log(API_URL);
   try {
     const { address, jws } = req.body;
+    console.log(jws, address);
     const ceramic = new CeramicClient(API_URL.ceramic);
     const accountLink = await Caip10Link.fromAccount(
       ceramic,
