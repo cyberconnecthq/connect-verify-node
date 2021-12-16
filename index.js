@@ -29,9 +29,9 @@ app.post("/verify", async (req, res) => {
       ...threeIdResolver,
     };
     const did = new DID({ resolver });
-    console.log("did:", did);
+    // console.log("did:", did);
     const resolvedDoc = await did.resolve(accountLink.did);
-    console.log(resolvedDoc);
+    // console.log(resolvedDoc);
     if (
       !resolvedDoc.didDocument ||
       !resolvedDoc.didDocument.verificationMethod
@@ -42,7 +42,7 @@ app.post("/verify", async (req, res) => {
       jws,
       resolvedDoc.didDocument.verificationMethod
     );
-    console.log(matchedPub);
+    // console.log(matchedPub);
     res.send({
       verified: true,
       pubkey: matchedPub.publicKeyBase58,
@@ -50,6 +50,7 @@ app.post("/verify", async (req, res) => {
       did: matchedPub.id,
     });
   } catch (e) {
+    console.log(e);
     res.send({ verified: false });
   }
 });
