@@ -17,6 +17,7 @@ const API_URL = {
 };
 
 app.post("/verify", async (req, res) => {
+  console.log(API_URL);
   try {
     const { address, jws } = req.body;
     const ceramic = new CeramicClient(API_URL.ceramic);
