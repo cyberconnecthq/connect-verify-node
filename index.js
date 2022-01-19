@@ -6,6 +6,7 @@ const { Caip10Link } = require("@ceramicnetwork/stream-caip10-link");
 const { DID } = require("dids");
 const ThreeIdResolver = require("@ceramicnetwork/3id-did-resolver");
 const did_jwt_1 = require("did-jwt");
+const verifyTwitterHandle = require("./solanaTwitterVerify");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -56,6 +57,9 @@ app.post("/verify", async (req, res) => {
     res.send({ verified: false });
   }
 });
+
+app.post("/solanaTwitterVerify", verifyTwitterHandle);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, (err) => {
   if (err) throw err;
