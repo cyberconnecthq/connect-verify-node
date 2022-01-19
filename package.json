@@ -21,11 +21,15 @@
   "homepage": "https://github.com/cyberconnecthq/connect-verify-node#readme",
   "dependencies": {
     "@3id/connect": "^0.2.5",
+    "@bonfida/spl-name-service": "^0.1.24",
     "@ceramicnetwork/blockchain-utils-linking": "^1.5.1-rc.1",
     "@ceramicnetwork/stream-caip10-link": "^1.2.4",
     "@ceramicstudio/idx": "^0.12.2",
     "@ethersproject/address": "^5.4.0",
     "@ethersproject/providers": "^5.4.5",
+    "@solana/wallet-adapter-base": "^0.9.1",
+    "@solana/wallet-adapter-wallets": "^0.14.1",
+    "@solana/web3.js": "^1.31.0",
     "@stablelib/sha256": "^1.0.1",
     "3id-did-provider": "^1.1.0",
     "base58-js": "^1.0.0",
@@ -36,10 +40,7 @@
     "express": "^4.17.1",
     "framer-motion": "^4",
     "git": "^0.1.5",
-    "uint8arrays": "^3.0.0",
-    "@bonfida/spl-name-service": "^0.1.24",
-    "@solana/wallet-adapter-base": "^0.9.1",
-    "@solana/wallet-adapter-wallets": "^0.14.1"
+    "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
