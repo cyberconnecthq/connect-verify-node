@@ -36,7 +36,10 @@
     "express": "^4.17.1",
     "framer-motion": "^4",
     "git": "^0.1.5",
-    "uint8arrays": "^3.0.0"
+    "uint8arrays": "^3.0.0",
+    "@bonfida/spl-name-service": "^0.1.24",
+    "@solana/wallet-adapter-base": "^0.9.1",
+    "@solana/wallet-adapter-wallets": "^0.14.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
