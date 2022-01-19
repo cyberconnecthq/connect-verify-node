@@ -1,6 +1,6 @@
-import { getHandleAndRegistryKey } from "@bonfida/spl-name-service";
-import { PublicKey, Connection } from "@solana/web3.js";
-export default async function SolanaTwitterVerify(req, res) {
+const { getHandleAndRegistryKey } = require("@bonfida/spl-name-service");
+const { PublicKey, Connection } = require("@solana/web3.js");
+module.exports = async function SolanaTwitterVerify(req, res) {
   const connection = new Connection(
     "https://ssc-dao.genesysgo.net/",
     "confirmed"
@@ -23,4 +23,4 @@ export default async function SolanaTwitterVerify(req, res) {
       });
     }
   }
-}
+};
